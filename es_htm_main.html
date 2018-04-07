@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+	<head>
+	
+		<title> Easy Chat </title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		
+		<meta name="description" content="Easy Chat is a module which can be added to a website to provide chat features.">
+		<meta name="author" content="Vyom Chhabra">
+        
+		<!-- CSS add-ons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" type="text/css" href="es_css_main.css">
+		
+		<!-- Javascript add-ons-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="es_jvs_main.js"></script>
+
+	</head>
+
+	<body>
+		<div class="es_body">
+			<div class="es_body_header">
+			</div>
+			<div id="es_body_content" class="es_body_content">
+			</div>
+			<div class="es_body_footer">
+				<button id="enter" class="es_body_footer_btn" onclick="enter_data()">&#x21AA</button>
+				<input id="query" type="text" name="query" required placeholder="Enter Query...">
+			</div>			
+		</div>
+		
+		<script>
+			var input_dat = document.getElementById("query");
+			input_dat.addEventListener("keyup", function(event) {
+				event.preventDefault();
+				if (event.keyCode === 13) {enter_data();}
+			}); 
+		</script>
+	</body>
+
+</html>

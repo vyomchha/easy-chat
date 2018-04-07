@@ -1,0 +1,198 @@
+/****************************
+	Author: vyom chhabra
+	Date  : 09/27/2017
+*****************************/
+
+/****************************
+Extra Data
+*****************************/
+@-ms-viewport{
+	width: device-width;
+	height: device-height;
+}
+
+a{
+	transition: color 1.0s ease;
+}
+
+#sample {
+	width: 100%;
+    height: auto;
+}
+
+a:link {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+a:visited {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+a:hover {
+    text-decoration: none;
+	color: rgba(10,10,10,1);
+}
+
+a:active {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 520px;
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: auto;
+	-moz-text-size-adjust: auto;
+	text-size-adjust: auto;
+	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
+    overflow:auto;
+}
+
+/****************************
+Main Body Data
+*****************************/
+div.es_body {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: relative;
+	width: 98vw;
+	height: 520px;
+	overflow:hidden;
+	border-left: 1vw solid rgba(0,0,0,1);
+	border-right: 1vw solid rgba(0,0,0,1);
+}
+
+div.es_body_header {
+	background-color: rgba(235,245,255,1);
+	background-size: 100% 100%;	
+	display: inline-block;
+	position: relative;
+	width: 98vw;
+	height: 50px;
+	overflow:hidden;
+}
+
+/****************************
+Content Data
+*****************************/
+div.es_body_content {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: inline-block;
+	position: relative;
+	width: 98vw;
+	height: 400px;
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+
+div.es_body_content_text {
+	display: block;
+	position: relative;
+	width: 98vw;
+	font-size: 20px;
+	overflow:hidden;
+}
+
+div.es_body_content_text_user {
+	background-color: rgba(130,170,255,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: relative;
+	padding: 10px 20px;
+	margin: 5px;
+	overflow:hidden;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	float: right;
+}
+
+div.es_body_content_text_reply {
+	background-color: rgba(130,255,170,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: relative;
+	padding: 10px 20px;
+	margin: 5px;
+	overflow:hidden;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	float: left;
+}
+
+/****************************
+Footer Data
+*****************************/
+div.es_body_footer {
+	background-color: rgba(235,245,255,1);
+	background-size: 100% 100%;	
+	display: inline-block;
+	position: relative;
+	width: 98vw;
+	height: 70px;
+	overflow:hidden;
+}
+
+button.es_body_footer_btn {
+	top: 11px;
+	left: 80.5vw;
+    width: 17vw;
+	height: 40px;
+    display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	background-color: rgba(235,245,255,1);
+}
+button.es_body_footer_btn:hover {
+	cursor: pointer;
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	background-color: rgba(210,210,210,1);
+}
+/****************************
+Table Data
+*****************************/
+table.mmf_bc_form {
+	width: 90vw;
+	margin: auto;
+	text-align: center;
+	font-size: 3vw;
+	display: inline-block;
+	color: rgba(40,40,40,1);
+}
+
+table.mmf_bc_form td {
+	width: 90vw;
+	margin: auto;
+}
+/****************************
+Form Data
+*****************************/
+input[type=text] {
+    width: 76vw;
+	height: 50px;
+    display: inline-block;
+	position: absolute;
+	padding: 10px;
+	text-indent: 20px;
+	font-size: 20px;
+	border: 0;
+	border-radius: 0;
+	background-color: rgba(235,245,255,1);
+	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
+}
+input:focus {
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	background-color: rgba(210,210,210,1);
+}
+
