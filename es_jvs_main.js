@@ -8,3 +8,8 @@ function enter_data(){
 	par.appendChild(div);
 };
 
+var input_dat = document.getElementById("query");
+input_dat.addEventListener("keyup", function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {enter_data();}
+}); 
