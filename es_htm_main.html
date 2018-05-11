@@ -17,9 +17,8 @@
         <link rel="stylesheet" type="text/css" href="es_css_main.css">
 		
 		<!-- Javascript add-ons-->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="es_jvs_main.js"></script>
-
 	</head>
 
 	<body>
@@ -29,7 +28,7 @@
 			<div id="es_body_content" class="es_body_content">
 			</div>
 			<div class="es_body_footer">
-				<button id="enter" class="es_body_footer_btn" onclick="enter_data()">&#x21AA</button>
+				<button id="enter" class="es_body_footer_btn" onclick="enter_data();dialog_new();">&#x21AA</button>
 				<input id="query" type="text" name="query" required placeholder="Enter Query...">
 			</div>			
 		</div>
@@ -38,8 +37,27 @@
 			var input_dat = document.getElementById("query");
 			input_dat.addEventListener("keyup", function(event) {
 				event.preventDefault();
-				if (event.keyCode === 13) {enter_data();}
+				if (event.keyCode === 13) {enter_data();dialog_new();}
 			}); 
+			
+			function dialog_new() {
+				$.ajax({
+					url: 'file:///C:/Users/vyomc/Documents/GitHub/easy%20chat/es_jvs_node.js',
+					// dataType: "jsonp",
+					data: {"data": dat},
+					type: 'POST',
+					jsonpCallback: 'callback', // this is not relevant to the POST anymore
+					success: function (data) {
+						var ret = jQuery.parseJSON(data);
+						$('#lblResponse').html(ret.msg);
+						console.log('Success: ')
+					},
+					error: function (xhr, status, error) {
+						console.log('Error: ' + error.message);
+						$('#lblResponse').html('Error connecting to the server.');
+					},
+				});
+			}
 		</script>
 	</body>
 
