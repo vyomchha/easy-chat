@@ -51,8 +51,6 @@ function enter_res(dat){
 $(document).ready(function() {
 	$(document).on("click", "input[name='es_op']" , function() {
 		$('#query').val($(this).val());
-		var par = document.getElementById('es_op_form');
-		par.innerHTML = "";
 		$('#es_op_form').submit();
 	});
 	var $frm = $('form');
@@ -68,6 +66,8 @@ $(document).ready(function() {
 			processData: true,
             beforeSend: function() {
                enter_req();
+				var par = document.getElementById('es_op_form');
+				par.innerHTML = "";
             },
 		}).done(function(data) {
 			enter_res(data.output);

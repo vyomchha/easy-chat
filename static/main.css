@@ -190,13 +190,13 @@ input[type=submit].es_body_options_btn {
 	font-size: 15px;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 5px;
-	background-color: rgba(235,245,255,1);
+	background-color: rgba(255,255,255,1);
 }
 input[type=submit].es_body_options_btn:hover {
 	cursor: pointer;
 	transition: color 1.0s ease;
 	transition: background-color 1.0s ease;
-	background-color: rgba(210,210,210,1);
+	background-color: rgba(235,245,255,1);
 }
 /****************************
 Table Data
