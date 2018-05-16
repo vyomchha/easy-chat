@@ -13,7 +13,7 @@ except ImportError:
     )
     import apiai
 
-CLIENT_ACCESS_TOKEN = '8b95d7fdfe574e6786e9642bdd793f37'
+CLIENT_ACCESS_TOKEN = '226071ee70a84d7097454a21fe48a65b'
 
 class UUIDEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -35,7 +35,7 @@ def main(query):
     request.session_id = my_id
     request.query = query
 
-    response = request.getresponse().read().decode('UTF-8');jsonobj = json.loads(response);return str(jsonobj['result']['fulfillment']['speech']);
+    response = request.getresponse().read().decode('UTF-8');jsonobj = json.loads(response);return jsonobj;
 
 app = Flask(__name__)
 
@@ -51,10 +51,11 @@ def _get_data():
 	#print(request.form)
 	print('input:',request.form['name'])
 	out = main(request.form['name'])
-	print('output:',out)
-	if (out): return jsonify({'output' : out})
+	print('output:',str(out['result']['fulfillment']['speech']))
+	#print('output2:',str(out['result']['fulfillment']['messages']))
+	if (out): return jsonify({'output' : str(out['result']['fulfillment']['speech'])})
 	return jsonify({'error' : 'Missing data!'})
 
 
 if __name__ == "__main__":
-	app.run(debug=True, port=4200)
+	app.run(debug=True, port=4780)

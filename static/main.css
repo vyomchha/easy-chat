@@ -53,6 +53,9 @@ body {
     overflow:auto;
 }
 
+.ibk {
+    display: inline-block;
+}
 /****************************
 Main Body Data
 *****************************/
@@ -61,11 +64,9 @@ div.es_body {
 	background-size: 100% 100%;	
 	display: block;
 	position: relative;
-	width: 98vw;
-	height: 520px;
+	width: 400px;
+	height: 550px;
 	overflow:hidden;
-	border-left: 1vw solid rgba(0,0,0,1);
-	border-right: 1vw solid rgba(0,0,0,1);
 }
 
 div.es_body_header {
@@ -73,9 +74,12 @@ div.es_body_header {
 	background-size: 100% 100%;	
 	display: inline-block;
 	position: relative;
-	width: 98vw;
+	width: 400px;
 	height: 50px;
 	overflow:hidden;
+	text-align: center;
+	font-size: 30px;
+	z-index: 2;
 }
 
 /****************************
@@ -86,18 +90,20 @@ div.es_body_content {
 	background-size: 100% 100%;	
 	display: inline-block;
 	position: relative;
-	width: 98vw;
+	width: 400px;
 	height: 400px;
-	overflow-x:auto;
-	overflow-y:hidden;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 1;
 }
 
 div.es_body_content_text {
 	display: block;
 	position: relative;
-	width: 98vw;
+	width: 400px;
 	font-size: 20px;
 	overflow:hidden;
+	background-color: rgba(255,255,255,1);
 }
 
 div.es_body_content_text_user {
@@ -106,7 +112,7 @@ div.es_body_content_text_user {
 	display: block;
 	position: relative;
 	padding: 10px 20px;
-	margin: 5px;
+	margin: 5px 5px 5px 50px;
 	overflow:hidden;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 10px;
@@ -119,7 +125,7 @@ div.es_body_content_text_reply {
 	display: block;
 	position: relative;
 	padding: 10px 20px;
-	margin: 5px;
+	margin: 5px 50px 5px 5px;
 	overflow:hidden;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 10px;
@@ -134,16 +140,17 @@ div.es_body_footer {
 	background-size: 100% 100%;	
 	display: inline-block;
 	position: relative;
-	width: 98vw;
-	height: 70px;
+	width: 400px;
+	height: 50px;
+	top: 40px;
 	overflow:hidden;
 }
 
-button.es_body_footer_btn {
-	top: 11px;
-	left: 80.5vw;
-    width: 17vw;
-	height: 40px;
+input[type=submit].es_body_footer_btn {
+	top: 4px;
+	left: 348px;
+    width: 50px;
+	height: 42px;
     display: inline-block;
 	position: absolute;
 	text-align: center;
@@ -152,7 +159,40 @@ button.es_body_footer_btn {
 	border-radius: 10px;
 	background-color: rgba(235,245,255,1);
 }
-button.es_body_footer_btn:hover {
+input[type=submit].es_body_footer_btn:hover {
+	cursor: pointer;
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	background-color: rgba(210,210,210,1);
+}
+
+/****************************
+Options Data
+*****************************/
+div.es_body_options {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: inline-block;
+	position: fixed;
+	width: 400px;
+	bottom: 50px;
+	overflow:hidden;
+	z-index: 2;
+	text-align: center;
+}
+
+input[type=submit].es_body_options_btn {
+	margin: 2px;
+	height: 30px;
+    display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 15px;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 5px;
+	background-color: rgba(235,245,255,1);
+}
+input[type=submit].es_body_options_btn:hover {
 	cursor: pointer;
 	transition: color 1.0s ease;
 	transition: background-color 1.0s ease;
@@ -178,7 +218,7 @@ table.mmf_bc_form td {
 Form Data
 *****************************/
 input[type=text] {
-    width: 76vw;
+    width: 330px;
 	height: 50px;
     display: inline-block;
 	position: absolute;
@@ -189,10 +229,5 @@ input[type=text] {
 	border-radius: 0;
 	background-color: rgba(235,245,255,1);
 	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
-}
-input:focus {
-	transition: color 1.0s ease;
-	transition: background-color 1.0s ease;
-	background-color: rgba(210,210,210,1);
 }
 

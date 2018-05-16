@@ -26,16 +26,18 @@
 
 	<body>
 		<div class="es_body">
-			<div class="es_body_header">
-			</div>
+			<div class="es_body_header">HEADER</div>
 			<div id="es_body_content" class="es_body_content">
 			</div>
 			<div class="es_body_footer">
-				<form>
+				<form id="es_form">
 					<label class="sr-only" for="query">Query</label>
-					<input id="query" type="text" required placeholder="Enter Query...">
-					<button class="es_body_footer_btn" type="submit" >&#x21AA</button>
+					<input id="query" type="text" placeholder="Enter Query...">
+					<input class="es_body_footer_btn" value="&#x21AA" type="submit">
 				</form>
+				<div class="es_body_options" id ="es_options">
+				<form id="es_op_form"></form>
+				</div>
 			</div>			
 		</div>
 		
