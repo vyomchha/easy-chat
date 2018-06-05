@@ -75,10 +75,11 @@ div.es_body_header {
 	display: inline-block;
 	position: relative;
 	width: 400px;
-	height: 50px;
+	height: 40px;
 	overflow:hidden;
 	text-align: center;
 	font-size: 30px;
+	padding: 5px;
 	z-index: 2;
 }
 
@@ -141,13 +142,13 @@ div.es_body_footer {
 	display: inline-block;
 	position: relative;
 	width: 400px;
-	height: 50px;
+	height: 60px;
 	top: 40px;
 	overflow:hidden;
 }
 
 input[type=submit].es_body_footer_btn {
-	top: 4px;
+	top: 6px;
 	left: 348px;
     width: 50px;
 	height: 42px;
@@ -179,11 +180,12 @@ div.es_body_options {
 	overflow:hidden;
 	z-index: 2;
 	text-align: center;
+	border-top: 3px solid rgba(0,0,0,1);
 }
 
 input[type=submit].es_body_options_btn {
 	margin: 2px;
-	height: 30px;
+	height: 27px;
     display: inline-block;
 	position: relative;
 	text-align: center;
@@ -219,7 +221,7 @@ Form Data
 *****************************/
 input[type=text] {
     width: 330px;
-	height: 50px;
+	height: 35px;
     display: inline-block;
 	position: absolute;
 	padding: 10px;

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+	
+		<title> Easy Chat </title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		
+		<meta name="description" content="Easy Chat is a module which can be added to a website to provide chat features.">
+		<meta name="author" content="Vyom Chhabra">
+        
+		<!-- CSS add-ons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" type="text/css" href="main.css">
+			
+		<!-- Javascript add-ons-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="main.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="es_body">
+			<div class="es_body_header">HEADER</div>
+			<div id="es_body_content" class="es_body_content">
+			</div>
+			<div class="es_body_footer">
+				<form id="es_form">
+					<label class="sr-only" for="query">Query</label>
+					<input id="query" type="text" placeholder="Enter Query...">
+					<input class="es_body_footer_btn" value="&#x21AA" type="submit">
+				</form>
+				<div class="es_body_options" id ="es_options">
+				<form id="es_op_form"></form>
+				</div>
+			</div>			
+		</div>
+		
+		<!--script>
+			var input_dat = document.getElementById("query");
+			input_dat.addEventListener("keyup", function(event) {
+				event.preventDefault();
+				if (event.keyCode === 13) {enter_data();$('form').submit;}
+			});
+		</script-->
+	</body>
+
+</html>
