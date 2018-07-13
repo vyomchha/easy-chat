@@ -24,7 +24,7 @@
 
 	<body>
 		<div class="es_body">
-			<div class="es_body_header">HEADER</div>
+			<div class="es_body_header">Acute Cough</div>
 			<div class="es_body_main">
 				<div id="es_body_content" class="es_body_content">
 				</div>
@@ -32,27 +32,22 @@
 			<div id="es_body_footer" class="es_body_footer">
 				<form id="es_form">
 					<label class="sr-only" for="query">Query</label>
-					<input type="hidden" id="capi" name="capi" value="226071ee70a84d7097454a21fe48a65b" />
+					<input type="hidden" id="capi" name="capi" value="e2f6cd40b9874d0998923105fa4db601" />
 					<input id="query" type="text" placeholder="Enter Query..." />
 				</form>	
 			</div>
 			<div class="es_body_options" id ="es_options">
 				<form id="es_op_form"></form>
 			</div>
-			<button id ="speech-btn" class="es_body_footer_btn fa fa-microphone" value="" onclick="startDictation()" />
+			<button id ="speech-btn" class="es_body_footer_btn fa fa-microphone" value="" onclick="startDictation()"></button>
 		</div>
 		
 		<div class="es_dr_joy">
-			<button id ="mute-btn" class="es_body_mute_btn" value="mute" onclick="changeMute()">Mute</button>
+			<div id="start-msg" class="es_body_starter">Hello, I am Dr. Joy and I am here to help you.</div>
+			<button id ="mute-btn" class="es_body_mute_btn" value="mute" onclick="changeMute()">Mute Me</button>
+			<div class="arrow-down"></div>
 		</div>
 		
-		<!--script>
-			var input_dat = document.getElementById("query");
-			input_dat.addEventListener("keyup", function(event) {
-				event.preventDefault();
-				if (event.keyCode === 13) {enter_data();$('form').submit;}
-			});
-		</script-->
 	</body>
 
 </html>

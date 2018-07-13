@@ -27,25 +27,18 @@
 			<div class="es_body_header">HEADER</div>
 			<div id="es_body_content" class="es_body_content">
 			</div>
-			<div class="es_body_footer">
+			<div id="es_body_footer" class="es_body_footer">
 				<form id="es_form">
 					<label class="sr-only" for="query">Query</label>
-					<input id="query" type="text" placeholder="Enter Query...">
-					<input class="es_body_footer_btn" value="&#x21AA" type="submit">
-				</form>
-				<div class="es_body_options" id ="es_options">
+					<input type="hidden" id="capi" name="capi" value="226071ee70a84d7097454a21fe48a65b" />
+					<input id="query" type="text" placeholder="Enter Query..." />
+				</form>	
+					<button id ="speech-btn" class="es_body_footer_btn fa fa-microphone" onclick="startDictation()" />
+			</div>
+			<div class="es_body_options" id ="es_options">
 				<form id="es_op_form"></form>
-				</div>
-			</div>			
+			</div>
 		</div>
-		
-		<!--script>
-			var input_dat = document.getElementById("query");
-			input_dat.addEventListener("keyup", function(event) {
-				event.preventDefault();
-				if (event.keyCode === 13) {enter_data();$('form').submit;}
-			});
-		</script-->
 	</body>
 
 </html>

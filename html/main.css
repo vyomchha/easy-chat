@@ -41,9 +41,8 @@ a:active {
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	min-height: 520px;
+	width: 100vw;
+	height: 100vh;
 	padding: 0;
 	margin: 0;
 	-webkit-text-size-adjust: auto;
@@ -56,43 +55,136 @@ body {
 .ibk {
     display: inline-block;
 }
+
 /****************************
 Main Body Data
 *****************************/
 div.es_body {
 	background-color: rgba(255,255,255,1);
+	background-image: url("ipad.jpg");
 	background-size: 100% 100%;	
-	display: block;
+	display: inline-block;
 	position: relative;
-	width: 400px;
-	height: 550px;
+	float: left;
+	width: 60vw;
+	height: 100vh;
 	overflow:hidden;
+}
+
+div.es_dr_joy {
+	background-color: rgba(255,255,255,1);
+	background-image: url("dr-joy.gif");
+	background-size: 100% 70%;	
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-position: bottom; 
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 40vw;
+	height: 100vh;
+	overflow:hidden;
+}
+
+h1.es_dr_joy_head {
+	color: rgba(52,152,219,1);
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	width: 40vw;
+	overflow:hidden;
+	font-size: 5vw;
 }
 
 div.es_body_header {
-	background-color: rgba(235,245,255,1);
+	background-color: rgba(52,152,219,1);
 	background-size: 100% 100%;	
-	display: inline-block;
-	position: relative;
-	width: 400px;
-	height: 40px;
+	display: block;
+	position: absolute;
+	width: 35.2vw;
+	height: 5vh;
+	left: 12.4vw;
+	top: 10.7vh;
 	overflow:hidden;
 	text-align: center;
-	font-size: 30px;
-	padding: 5px;
+	font-size: 4vh;
+	padding: 0;
 	z-index: 2;
+	border-bottom: 3px solid black;
 }
 
+div.es_body_starter {
+	top: 2vh;
+	left: 0vw;
+    width: 37vw;
+	height: 25vh;
+    display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-size: 6vh;
+	border: 1vh solid rgba(0,0,0,1);
+	border-radius: 2vw;
+	background-color: rgba(0,0,0,1);
+	color: rgba(52,152,219,1);
+}
+
+div.arrow-down {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	top: 28.5vh;
+	left: 18vw;
+	border-left: 2vh solid transparent;
+	border-right: 2vh solid transparent;
+
+	border-top: 1vw solid rgba(0,0,0,1);
+}
+
+button.es_body_mute_btn {
+	top: 18vh;
+	left: 23.5vw;
+    width: 14vw;
+	height: 10vh;
+    display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-size: 4vh;
+	border: 1vh solid rgba(52,152,219,1);
+	border-radius: 2vw;
+	background-color: rgba(0,0,0,1);
+	color: rgba(52,152,219,1);
+}
+button.es_body_mute_btn:hover {
+	cursor: pointer;
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	color: rgba(0,0,0,1);
+	background-color: rgba(52,152,219,1);
+}
 /****************************
 Content Data
 *****************************/
+div.es_body_main {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 35.2vw;
+	height: 68vh;
+	left: 12.4vw;
+	top: 15.7vh;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 1;
+}
+
 div.es_body_content {
 	background-color: rgba(255,255,255,1);
 	background-size: 100% 100%;	
-	display: inline-block;
-	position: relative;
-	width: 400px;
-	height: 400px;
+	display: block;
+	position: absolute;
+	width: 35.2vw;
+	height: 68vh;
 	overflow-x:hidden;
 	overflow-y:auto;
 	z-index: 1;
@@ -101,19 +193,19 @@ div.es_body_content {
 div.es_body_content_text {
 	display: block;
 	position: relative;
-	width: 400px;
-	font-size: 20px;
+	width: 35vw;
+	font-size: 3vh;
 	overflow:hidden;
 	background-color: rgba(255,255,255,1);
 }
 
 div.es_body_content_text_user {
-	background-color: rgba(130,170,255,1);
+	background-color: rgba(52,152,219,1);
 	background-size: 100% 100%;	
 	display: block;
 	position: relative;
-	padding: 10px 20px;
-	margin: 5px 5px 5px 50px;
+	padding: 1vh 1vw;
+	margin: 1vh 1vw 1vh 5vw;
 	overflow:hidden;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 10px;
@@ -121,12 +213,12 @@ div.es_body_content_text_user {
 }
 
 div.es_body_content_text_reply {
-	background-color: rgba(130,255,170,1);
+	background-color: rgba(230,230,230,1);
 	background-size: 100% 100%;	
 	display: block;
 	position: relative;
-	padding: 10px 20px;
-	margin: 5px 50px 5px 5px;
+	padding: 1vh 1vw;
+	margin: 1vh 5vw 1vh 1vw;
 	overflow:hidden;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 10px;
@@ -137,34 +229,37 @@ div.es_body_content_text_reply {
 Footer Data
 *****************************/
 div.es_body_footer {
-	background-color: rgba(235,245,255,1);
+	background-color: rgba(210,210,210,1);
 	background-size: 100% 100%;	
-	display: inline-block;
-	position: relative;
-	width: 400px;
-	height: 60px;
-	top: 40px;
+	display: block;
+	position: absolute;
+	width: 35.2vw;
+	height: 6vh;
+	left: 12.4vw;
+	top: 83.7vh;
 	overflow:hidden;
 }
 
-input[type=submit].es_body_footer_btn {
-	top: 6px;
-	left: 348px;
-    width: 50px;
-	height: 42px;
+button.es_body_footer_btn {
+	top: 92.5vh;
+	left: 28.5vw;
+    width: 3vw;
+	height: 5vh;
     display: inline-block;
 	position: absolute;
 	text-align: center;
-	font-size: 20px;
-	border: 1px solid rgba(0,0,0,1);
-	border-radius: 10px;
-	background-color: rgba(235,245,255,1);
+	font-size: 3vh;
+	border: 1px solid rgba(255,255,255,1);
+	border-radius: 50%;
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
 }
-input[type=submit].es_body_footer_btn:hover {
+button.es_body_footer_btn:hover {
 	cursor: pointer;
 	transition: color 1.0s ease;
 	transition: background-color 1.0s ease;
-	background-color: rgba(210,210,210,1);
+	background-color: rgba(255,255,255,1);
+	color: rgba(0,0,0,1);
 }
 
 /****************************
@@ -173,23 +268,25 @@ Options Data
 div.es_body_options {
 	background-color: rgba(255,255,255,1);
 	background-size: 100% 100%;	
-	display: inline-block;
-	position: fixed;
-	width: 400px;
-	bottom: 50px;
+	display: block;
+    position: absolute;
+	width: 33vw;
+	left: 12.4vw;
+	bottom: 16.2vh;
+	width: 35.2vw;
 	overflow:hidden;
-	z-index: 2;
+	z-index: 5;
 	text-align: center;
-	border-top: 3px solid rgba(0,0,0,1);
+	border-top: 3px solid black;
 }
 
 input[type=submit].es_body_options_btn {
-	margin: 2px;
-	height: 27px;
+	margin: .5vh .25vw;
+	height: 4vh;
     display: inline-block;
 	position: relative;
 	text-align: center;
-	font-size: 15px;
+	font-size: 2.5vh;
 	border: 1px solid rgba(0,0,0,1);
 	border-radius: 5px;
 	background-color: rgba(255,255,255,1);
@@ -198,7 +295,7 @@ input[type=submit].es_body_options_btn:hover {
 	cursor: pointer;
 	transition: color 1.0s ease;
 	transition: background-color 1.0s ease;
-	background-color: rgba(235,245,255,1);
+	background-color: rgba(52,152,219,1);
 }
 /****************************
 Table Data
@@ -220,16 +317,264 @@ table.mmf_bc_form td {
 Form Data
 *****************************/
 input[type=text] {
-    width: 330px;
-	height: 35px;
+    width: 100%;
+	height: 5vh;
     display: inline-block;
 	position: absolute;
-	padding: 10px;
-	text-indent: 20px;
-	font-size: 20px;
+	padding: .5vh;
+	text-indent: 2vw;
+	font-size: 3vh;
 	border: 0;
 	border-radius: 0;
-	background-color: rgba(235,245,255,1);
+	background-color: rgba(210,210,210,1);
 	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
 }
 
+
+/* landscape part 1*/
+@media only screen and (max-width: 600px) {
+	/****************************
+Main Body Data
+*****************************/
+div.es_body {
+	background-image: none;
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: inline-block;
+	position: relative;
+	float: center;
+	width: 100vw;
+	height: 100vh;
+	overflow:hidden;
+}
+
+div.es_dr_joy {
+	display: none;
+}
+
+h1.es_dr_joy_head {
+	color: rgba(52,152,219,1);
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 100vw;
+	overflow:hidden;
+	font-size: 5vw;
+}
+
+div.es_body_header {
+	background-color: rgba(52,152,219,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100vw;
+	left: 0vw;
+	height: 6vh;
+	top: 0vh;
+	overflow:hidden;
+	text-align: center;
+	font-size: 5vh;
+	padding: 0;
+	z-index: 2;
+	border-bottom: 3px solid black;
+}
+
+
+button.es_body_mute_btn {
+    display: none;
+}
+/****************************
+Content Data
+*****************************/
+div.es_body_main {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100vw;
+	left: 0vw;
+	height: 84vh;
+	top: 6vh;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 1;
+}
+
+div.es_body_starter {
+	background-color: rgba(52,152,219,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100vw;
+	left: 0vw;
+	height: 100vh;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 10;
+	text-align: center;
+	font-size: 10vh;
+	padding-top: 20vh;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+
+    -webkit-transition: display 1s ease-in-out;
+    -moz-transition: display 1s ease-in-out;
+    -ms-transition: display 1s ease-in-out;
+    -o-transition: display 1s ease-in-out;
+	transition: display 1s ease-in-out;
+}
+
+div.es_body_content {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100vw;
+	left: 0vw;
+	height: 84vh;
+	top: 6vh;
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 1;
+}
+
+div.es_body_content_text {
+	display: block;
+	position: relative;
+	width: 100vw;
+	font-size: 3vh;
+	overflow:hidden;
+	background-color: rgba(255,255,255,1);
+}
+
+div.es_body_content_text_user {
+	background-color: rgba(52,152,219,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: relative;
+	padding: 1vh 1vw;
+	margin: 1vh 1vw 1vh 5vw;
+	overflow:hidden;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	float: right;
+}
+
+div.es_body_content_text_reply {
+	background-color: rgba(230,230,230,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: relative;
+	padding: 1vh 1vw;
+	margin: 1vh 5vw 1vh 1vw;
+	overflow:hidden;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	float: left;
+}
+
+/****************************
+Footer Data
+*****************************/
+div.es_body_footer {
+	background-color: rgba(210,210,210,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100vw;
+	left: 0vw;
+	height: 6vh;
+	top: 94vh;
+	overflow:hidden;
+}
+
+button.es_body_footer_btn {
+	top: 95vh;
+	left: 90vw;
+    width: 10vw;
+	height: 5vh;
+    display: inline-block;
+	border: 0;
+	position: absolute;
+	text-align: left;
+	font-size: 3vh;
+	color: rgba(0,0,0,1);
+	background-color: rgba(210,210,210,1);
+}
+
+button.es_body_footer_btn:hover {
+	cursor: pointer;
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	color: rgba(52,152,219,1);
+	background-color: rgba(210,210,210,1);
+}
+
+/****************************
+Options Data
+*****************************/
+div.es_body_options {
+	background-color: rgba(255,255,255,1);
+	background-size: 100% 100%;	
+	display: block;
+    position: absolute;
+	width: 100vw;
+	left: 0vw;
+	bottom: 6vh;
+	overflow:hidden;
+	z-index: 5;
+	text-align: center;
+	border-top: 3px solid black;
+}
+
+input[type=submit].es_body_options_btn {
+	margin: .5vh .25vw;
+	height: 4vh;
+    display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 2.5vh;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,1);
+}
+input[type=submit].es_body_options_btn:hover {
+	cursor: pointer;
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	background-color: rgba(52,152,219,1);
+}
+/****************************
+Table Data
+*****************************/
+table.mmf_bc_form {
+	width: 90vw;
+	margin: auto;
+	text-align: center;
+	font-size: 3vw;
+	display: inline-block;
+	color: rgba(40,40,40,1);
+}
+
+table.mmf_bc_form td {
+	width: 90vw;
+	margin: auto;
+}
+/****************************
+Form Data
+*****************************/
+input[type=text] {
+    width: 100%;
+	height: 5vh;
+    display: inline-block;
+	position: absolute;
+	padding: .5vh;
+	text-indent: 2vw;
+	font-size: 3vh;
+	border: 0;
+	border-radius: 0;
+	background-color: rgba(210,210,210,1);
+	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
+}
+
+}
