@@ -9,12 +9,12 @@ var mute = false;
 function changeMute(){
 	if (mute == false) {
 		mute = true;
-		document.getElementById("mute-btn").innerHTML = "Un-Mute Me";
+		document.getElementById("mute-btn").className = "es_body_mute_btn fa fa-volume-off";
 		window.speechSynthesis.cancel();
 	}
 	else {
 		mute = false;
-		document.getElementById("mute-btn").innerHTML = "Mute Me";
+		document.getElementById("mute-btn").className = "es_body_mute_btn fa fa-volume-up";
 	}
 }
 
@@ -145,17 +145,19 @@ $(document).ready(function() {
 	
 	var accessToken = $('#capi').val();
 	if ($(window).width() < 600) {
-		ebc_height1 = '79vh';
-		ebc_height2 = '84vh';
+		ebc_height1 = '76vh';
+		ebc_height2 = '81vh';
 	}
 	$(window).on('resize', function(){
 		if($(this).width() < 600){
-		   ebc_height1 = '79vh';
-		   ebc_height2 = '84vh';
+		   ebc_height1 = '76vh';
+		   ebc_height2 = '81vh';
+			document.getElementById("es_body_content").style.height = ebc_height1;
 		}
 		else {
 		   ebc_height1 = '63vh';
 		   ebc_height2 = '68vh';
+			document.getElementById("es_body_content").style.height = ebc_height1;
 		}
 	});
 

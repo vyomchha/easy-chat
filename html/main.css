@@ -117,14 +117,15 @@ div.es_body_starter {
 	top: 2vh;
 	left: 0vw;
     width: 37vw;
-	height: 25vh;
+	height: 20vh;
+	padding-top:5vh;
     display: inline-block;
 	position: absolute;
 	text-align: center;
 	font-size: 6vh;
 	border: 1vh solid rgba(0,0,0,1);
 	border-radius: 2vw;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(255,255,255,1);
 	color: rgba(52,152,219,1);
 }
 
@@ -141,25 +142,26 @@ div.arrow-down {
 }
 
 button.es_body_mute_btn {
-	top: 18vh;
-	left: 23.5vw;
-    width: 14vw;
-	height: 10vh;
+	top: 11.25vh;
+	left: 44.5vw;
+    width: 3vw;
+	height: 4vh;
     display: inline-block;
 	position: absolute;
 	text-align: center;
-	font-size: 4vh;
-	border: 1vh solid rgba(52,152,219,1);
+	font-size: 2.5vh;
+	border: .25vh solid rgba(0,0,0,1);
 	border-radius: 2vw;
-	background-color: rgba(0,0,0,1);
-	color: rgba(52,152,219,1);
+	background-color: rgba(52,152,219,1);
+	color: rgba(0,0,0,1);
+	z-index: 10;
 }
 button.es_body_mute_btn:hover {
 	cursor: pointer;
 	transition: color 1.0s ease;
 	transition: background-color 1.0s ease;
-	color: rgba(0,0,0,1);
-	background-color: rgba(52,152,219,1);
+	color: rgba(52,152,219,1);
+	background-color: rgba(0,0,0,1);
 }
 /****************************
 Content Data
